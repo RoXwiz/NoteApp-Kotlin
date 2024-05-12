@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:elevation="10dp"
+    app:cardBackgroundColor="?colorSurface"
+    tools:context=".view.fragments.TodoDialog">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/addTodoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:gravity="center"
+            android:text="@string/addTask"
+            android:textColor="?colorOnSecondary"
+            android:textSize="@dimen/_24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/newTaskEditLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/dropdownAnchor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="@+id/categorySpinner"
+            app:layout_constraintStart_toStartOf="@+id/categorySpinner"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/newTaskEditLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_40dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_40dp"
+            app:boxBackgroundColor="?colorBackgroundFloating"
+            app:counterEnabled="true"
+            app:counterMaxLength="30"
+            app:layout_constraintBottom_toTopOf="@id/newDescriptionEditLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addTodoTitle">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/todoItemEdit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="@string/newTodo"
+                android:textSize="@dimen/_20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/newDescriptionEditLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            app:boxBackgroundColor="?colorBackgroundFloating"
+            app:layout_constraintBottom_toTopOf="@id/prioritySpinner"
+            app:layout_constraintEnd_toEndOf="@id/newTaskEditLayout"
+            app:layout_constraintStart_toStartOf="@id/newTaskEditLayout"
+            app:layout_constraintTop_toBottomOf="@id/newTaskEditLayout">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/descriptionEdit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="@string/details"
+                android:textSize="@dimen/_16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/prioritySpinner"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:hint="@string/prioritySpinnerHint"
+            app:layout_constraintBottom_toTopOf="@id/categorySpinner"
+            app:layout_constraintEnd_toEndOf="@+id/newTaskEditLayout"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/newTaskEditLayout"
+            app:layout_constraintTop_toBottomOf="@id/newDescriptionEditLayout">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dropDownAnchor="@id/dropdownAnchor"
+                android:dropDownHeight="@dimen/_280dp"
+                android:inputType="number"
+                android:text="@string/priorityDefault" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/categorySpinner"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/categorySpinnerHint"
+            app:layout_constraintBottom_toTopOf="@id/cancelBtn"
+            app:layout_constraintEnd_toEndOf="@+id/prioritySpinner"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/prioritySpinner"
+            app:layout_constraintTop_toBottomOf="@+id/prioritySpinner">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dropDownAnchor="@id/dropdownAnchor"
+                android:dropDownHeight="@dimen/_280dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:gravity="center"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/cancel"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/newTaskEditLayout"
+            app:layout_constraintTop_toBottomOf="@id/categorySpinner" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/add"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/newTaskEditLayout"
+            app:layout_constraintTop_toBottomOf="@id/categorySpinner" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
