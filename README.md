@@ -1,5 +1,5 @@
 # Notes-and-Todo-app
-Fully functional Note and Todo app template.  
+Fully functional Note and Todo app.  
 
 # About Todo
 - Add events in your To-do list, with categories, priorities and a detailed description available as additional information
