@@ -50,9 +50,9 @@ Fully functional Note and Todo app.
 
 
 ### Contact - Let's become friend
-- [Github](https://github.com/cheetahmail007)
-- [Linkedin](https://www.linkedin.com/in/abhishek-pathak-b735018b/)
-- [MEDIUM](https://medium.com/@myofficework000/mvvm-architecture-using-repository-pattern-for-beginners-181a5df3fff8)
+- [Github](https://github.com/RoXwiz)
+- [Linkedin](https://www.linkedin.com/in/shehan-perera/)
+
 
 <p>
 Don't forget to star ⭐ the repo it motivates me to share more open source
