@@ -51,7 +51,7 @@ Fully functional Note and Todo app.
 
 ### Contact - Let's become friend
 - [Github](https://github.com/RoXwiz)
-- [Linkedin](https://www.linkedin.com/in/shehan-perera/)
+- [Linkedin]([https://www.linkedin.com/in/shehan-perera/](https://www.linkedin.com/in/sm-perera/))
 
 
 <p>
